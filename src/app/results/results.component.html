@@ -1,0 +1,25 @@
+<!-- -------------Cards start here----------- -->
+<div class="wrapper clr-row">
+        <div *ngFor='let movie of _movieService.movies' class="clr-col-3">
+          <div class="card">
+          <div class="movie-img">
+            <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" 
+            alt="Movie Picture"
+            style="width: 300px">
+          </div>  
+          <div class="card-block">
+            <div class="card-header">
+              {{movie.title}}
+            </div>
+           
+            <div class="card-title">
+                  {{movie.overview}}
+            </div>
+          </div>
+          <div class="card-footer">
+            <button (click)='addToFavorites(movie)' class="btn btn-primary">Add to Favorites</button>
+          </div>
+        </div>
+        </div>
+  </div>
+  

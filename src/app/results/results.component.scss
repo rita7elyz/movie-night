@@ -1,0 +1,41 @@
+.wrapper {
+    background-color: rgb(118, 118, 247);
+}
+
+.card {
+    background-color: rgb(206, 206, 206);
+    border-radius: 15px;
+}
+
+.card-header, .card-footer {
+    // background-color: rgb(153, 153, 153);
+    font-weight: bold;
+}
+
+// @mixin fade-in-ellipsis($box-width, $right-width, $bg-color) {
+//     position: relative;
+//     max-width: calc(100% - #{$right-width});
+//     &:before {
+//       content: "";
+//       position: absolute;
+//       top: 0;
+//       left: calc(#{$box-width} - #{$right-width} - 30px);
+//       height: 100%;
+//       width: 30px;
+//       background-image : -webkit-linear-gradient(left, rgba($bg-color, 0), $bg-color);
+//       background-image : linear-gradient(left, rgba($bg-color, 0), $bg-color);
+//     }
+//   }
+  
+.card-title {
+    max-height: 80px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    // @include fade-in-ellipsis(10, 10, blue)
+}
+// .header-left {
+//     @include fade-in-ellipsis($box-width, $header-right-width, $box-color);
+//   }
+

@@ -1,0 +1,26 @@
+<h1>Your Favorites</h1>
+<!-- -------------Cards start here----------- -->
+<div class="wrapper clr-row">
+  <div *ngFor='let favorite of _favoritesService.favorites' class="clr-col-3">
+    <div class="card">
+    <div class="movie-img">
+      <img class="movie-img-tag" src="https://image.tmdb.org/t/p/w500/{{favorite.poster_path}}" 
+      alt="Movie Picture">
+    </div>  
+    <div class="card-block">
+      <div class="card-header">
+        {{favorite.title}}
+      </div>
+     
+      <div class="card-title">
+            {{favorite.overview}}
+      </div>
+    </div>
+    <div class="card-footer">
+      <button (click)='removeFromFavorites(favorite.id)' class="btn btn-primary">Remove from Favorites</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+  
