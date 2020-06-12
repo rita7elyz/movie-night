@@ -29,10 +29,7 @@ export class RegisterComponent implements OnInit {
   }
 
   signUp(){
-    console.log(this.form)
     this._userService.registerUser(this.form).subscribe( (res: any )=> {
-      console.log(res.token, res.userId)
-      console.log(res)
       sessionStorage.setItem('token', res.token);
       sessionStorage.setItem('userId', res.userId);
       this._userService.firstName = res.firstName;

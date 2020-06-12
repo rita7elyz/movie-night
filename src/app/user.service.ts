@@ -41,7 +41,6 @@ export class UserService {
       this.accessTokenUrl = `?access_token=${this.mySessionToken}`
     return this._http.get(`${this.baseUrl}${this.appUserUrl}${this.sessionIdUrl}${this.accessTokenUrl}`)
     .subscribe((res: any)=> {
-      console.log("res:", res)
       this.firstName = res.firstName;
       this.lastName = res.lastName;
       this.email = res.email;
