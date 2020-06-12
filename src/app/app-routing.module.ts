@@ -6,17 +6,17 @@ import { HeaderComponent } from './header/header.component'
 import { HomeComponent } from './home/home.component'
 import { LoginComponent } from './login/login.component'
 import { ResultsComponent } from './results/results.component'
-
+import { AuthguardService as AuthGuard } from './authguard.service';
 
 
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
-  { path: 'favorites', component: FavoritesComponent },
-  { path: 'header', component: HeaderComponent },
-  { path: 'home', component: HomeComponent, data:{requiresLogin: true} },
+  { path: 'favorites', component: FavoritesComponent, canActivate: [AuthGuard]},
+  { path: 'header', component: HeaderComponent, canActivate: [AuthGuard] },
+  { path: 'home', component: HomeComponent, data:{requiresLogin: true}, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
-  { path: 'results', component: ResultsComponent },
-  // { path: '', redirectTo: 'home' }
+  { path: 'results', component: ResultsComponent, canActivate: [AuthGuard] },
+  { path: '', redirectTo: 'register', pathMatch: 'full' }
 ];
 
 @NgModule({

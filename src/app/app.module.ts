@@ -18,7 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { LoginComponent } from './login/login.component';
 import { ResultsComponent } from './results/results.component'
-
+import { AuthguardService } from './authguard.service'
 
 
 @NgModule({
@@ -39,7 +39,7 @@ import { ResultsComponent } from './results/results.component'
     HttpClientModule,
     FormsModule
   ],
-  providers: [ApiService, UserService, MovieService],
+  providers: [ApiService, UserService, MovieService, AuthguardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
