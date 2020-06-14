@@ -8,7 +8,7 @@ import { UserService } from '../user.service'
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private _userservice: UserService) { }
+  constructor(public _userservice: UserService) { }
 
   ngOnInit() {
     this._userservice.getUser()

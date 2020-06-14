@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
     public router: Router, 
     private _movieService : MovieService, 
     private _favoritesService: FavoritesService,
-    private _userservice: UserService) { }
+    public _userservice: UserService) { }
 
   ngOnInit() {
     this._userservice.getUser()

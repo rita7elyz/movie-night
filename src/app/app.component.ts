@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'final-project-front';
 
 
-  constructor (private _userservice: UserService){}
+  constructor (public _userservice: UserService){}
 
     ngOnInit(){
 

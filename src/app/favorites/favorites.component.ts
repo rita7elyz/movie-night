@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http'
 })
 export class FavoritesComponent implements OnInit {
 
-  constructor(private _favoritesService: FavoritesService, public _http : HttpClient) { }
+  constructor(public _favoritesService: FavoritesService, public _http : HttpClient) { }
 
   ngOnInit() {
     
